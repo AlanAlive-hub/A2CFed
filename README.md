@@ -1,6 +1,6 @@
 # ICDE2026 Submission 
 
-《A^2CFed: Anonymous Adaptive Clustering for Federated Learning with Statistic Heterogeneity》
+《$A^2$CFed: Anonymous Adaptive Clustering for Federated Learning with Statistic Heterogeneity》
 
 ## 介绍
 

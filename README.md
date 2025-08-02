@@ -1,6 +1,6 @@
 # AAAI2026 Submission 
 
-《Less is more: Clustering with Adaptive Probability for Heterogeneous Federated Learning》
+《Less is More: Clustering with Adaptive Probability for Heterogeneous Federated Learning》
 
 ## 介绍
 

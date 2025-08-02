@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 # Python version: 3.7
 
-import matplotlib.pyplot as plt
-plt.rc('font',family='Times New Roman')
+# import matplotlib.pyplot as plt
+# plt.rc('font',family='Times New Roman')
 from torch.utils.data import DataLoader
 from torchvision import datasets
 from torchvision import transforms
@@ -16,7 +16,7 @@ class DatasetLoader(object):
         self.args = args
         self.dataset = args.dataset
         self.data_distribution = args.iid
-        self.num_user = args.num_user
+        self.num_client = args.num_user
         self.__load_dataset()
         self.__initial()
 
@@ -144,7 +144,7 @@ class DatasetLoader(object):
     def get_data(self, idxs):
         self.ldr_train = DataLoader(DatasetSplit(self.train_dataset, self.dict_train[idxs]), batch_size=self.args.local_bs, shuffle=True)
         self.ldr_test = DataLoader(DatasetSplit(self.test_dataset, self.dict_test[idxs]), batch_size=self.args.local_bs, shuffle=True)
-        return [self.ldr_train, self.ldr_test]
+        return [self.ldr_train, self.ldr_test, len(self.train_dataset)]
 
     def get_test_dataset(self):
         merged_array = list(self.dict_test.values())
